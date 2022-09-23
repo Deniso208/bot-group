@@ -10,7 +10,7 @@ random.seed()
 
 @bot.message_handler(commands=['startt'])
 def startt_message(message):
-    bot.send_message(message.chat.id, "Список команд:\n/andreybulling\n/rusikbulling\n/danyabulling\n/dedbulling\n/artembulling\n/sapehinbulling")
+    bot.send_message(message.chat.id, "Список команд:\n/andreybulling\n/rusikbulling\n/danyabulling\n/dedbulling\n/artembulling\n/sapiehinbulling")
     if (message.text=="Рил"):
         bot.send_sticker(message.chat.id, "CAACAgIAAxkBAAEClTZg8Ff8chF9AAHB_5ny-48k20OkoKgAAkAOAAIywglK38fhvyayJ3ogBA")
     elif (message.text=="рил"):
@@ -38,7 +38,7 @@ def Andrey_Bulling(message):
     photo = open('артем.jpeg', 'rb')
     bot.send_photo(message.chat.id, photo)
 
-@bot.message_handler(commands=['sapehinbulling'])
+@bot.message_handler(commands=['sapiehinbulling'])
 def Andrey_Bulling(message):
     chatId=message.chat.id
     bot.send_message(message.chat.id, "@vladi_sap , Слава Уьтраправому")
