@@ -4,13 +4,13 @@ import random
 import time
 starttime=time.time()
 
-Token="1848358920:AAFRs2eh0G3xW01ywFDvVR4F9sVY-HtvBCI"
+Token="5101327646:AAFmBDGfsnApng2Kfu21PEVNIvgTSUb9Bjo"
 bot = telebot.TeleBot(Token)
 random.seed()
 
 @bot.message_handler(commands=['startt'])
 def startt_message(message):
-    bot.send_message(message.chat.id, "Список команд:\n/andreybulling\n/rusikbulling\n/danyabulling")
+    bot.send_message(message.chat.id, "Список команд:\n/andreybulling\n/rusikbulling\n/danyabulling\n/dedbulling")
     if (message.text=="Рил"):
         bot.send_sticker(message.chat.id, "CAACAgIAAxkBAAEClTZg8Ff8chF9AAHB_5ny-48k20OkoKgAAkAOAAIywglK38fhvyayJ3ogBA")
     elif (message.text=="рил"):
@@ -22,6 +22,14 @@ def Andrey_Bulling(message):
     bot.send_message(message.chat.id, "@bokunoandi , соси кок")
     bot.send_audio(message.chat.id, open("Соси.ogg", "rb"))
     bot.send_sticker(message.chat.id, "CAACAgIAAxkBAAEC2H1hMeilIE0dQwoMTFpLnyeY0UB2FgACHwEAAjFnwjWRtaMdS7iIaCAE")
+
+@bot.message_handler(commands=['dedbulling'])
+def Andrey_Bulling(message):
+    chatId=message.chat.id
+    bot.send_message(message.chat.id, "@ded_vnutr1 , соси кок")
+    bot.send_audio(message.chat.id, open("бомбом.mp3", "rb"))
+    bot.send_sticker(message.chat.id, "CAACAgIAAxkBAAEC2H1hMeilIE0dQwoMTFpLnyeY0UB2FgACHwEAAjFnwjWRtaMdS7iIaCAE")
+
 
 @bot.message_handler(commands=['music'])
 def Music_Bulling(message):
@@ -127,7 +135,4 @@ def ALL(message):
 
  
 if __name__ == '__main__':
-    while True:
-        bot.infinity_polling()
-        time.sleep(5.0 - ((time.time() - starttime) % 5.0))
-        print("Aboba")
+     bot.polling(none_stop=True)
