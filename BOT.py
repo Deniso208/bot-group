@@ -10,7 +10,7 @@ random.seed()
 
 @bot.message_handler(commands=['startt'])
 def startt_message(message):
-    bot.send_message(message.chat.id, "Список команд:\n/andreybulling\n/rusikbulling\n/danyabulling\n/dedbulling\n/artembulling")
+    bot.send_message(message.chat.id, "Список команд:\n/andreybulling\n/rusikbulling\n/danyabulling\n/dedbulling\n/artembulling\n/sapeginbulling")
     if (message.text=="Рил"):
         bot.send_sticker(message.chat.id, "CAACAgIAAxkBAAEClTZg8Ff8chF9AAHB_5ny-48k20OkoKgAAkAOAAIywglK38fhvyayJ3ogBA")
     elif (message.text=="рил"):
