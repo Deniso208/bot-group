@@ -38,6 +38,14 @@ def Andrey_Bulling(message):
     photo = open('артем.jpeg', 'rb')
     bot.send_photo(message.chat.id, photo)
 
+@bot.message_handler(commands=['sapeginbulling'])
+def Andrey_Bulling(message):
+    chatId=message.chat.id
+    bot.send_message(message.chat.id, "@vladi_sap , соси big black dick super puper plus ultra HD+ 4K")
+    bot.send_audio(message.chat.id, open("reix.ogg", "rb"))
+    photo = open('sap.png', 'rb')
+    bot.send_photo(message.chat.id, photo)
+
 
 @bot.message_handler(commands=['music'])
 def Music_Bulling(message):
