@@ -4,7 +4,7 @@ import random
 import time
 starttime=time.time()
 
-Token="5101327646:AAFmBDGfsnApng2Kfu21PEVNIvgTSUb9Bjo"
+Token="1848358920:AAFRs2eh0G3xW01ywFDvVR4F9sVY-HtvBCI"
 bot = telebot.TeleBot(Token)
 random.seed()
 
