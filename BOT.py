@@ -27,15 +27,15 @@ def Andrey_Bulling(message):
 def Andrey_Bulling(message):
     chatId=message.chat.id
     bot.send_message(message.chat.id, "@ded_vnutr1 , соси кок")
-    bot.send_audio(message.chat.id, open("бомбом.mp3", "rb"))
+    bot.send_audio(message.chat.id, open("бомбом.ogg", "rb"))
     bot.send_sticker(message.chat.id, "CAACAgIAAxkBAAEC2H1hMeilIE0dQwoMTFpLnyeY0UB2FgACHwEAAjFnwjWRtaMdS7iIaCAE")
 
 @bot.message_handler(commands=['artembulling'])
 def Andrey_Bulling(message):
     chatId=message.chat.id
     bot.send_message(message.chat.id, "@Archimareto , соси big black dick super puper plus ultra HD+ 4K")
-    bot.send_audio(message.chat.id, open("Artem.mp3", "rb"))
-    photo = open('артем.jpg', 'rb')
+    bot.send_audio(message.chat.id, open("Artem.ogg", "rb"))
+    photo = open('артем.jpeg', 'rb')
     bot.send_photo(message.chat.id, photo)
 
 
