@@ -149,7 +149,7 @@ def pisun(message):
     intr=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,32,35]
     pon = random.choice(intr)
     user = message.chat.username
-    bot.send_message(message.chat.id, 'Пісюн ' + user + ' - '+ str(pon) + 'CМ')
+    bot.send_message(message.chat.id, 'Пісюн ' + user + ' - '+ str(random.randint(0,42))  + 'CМ')
 
 
 # def start_message(message):
