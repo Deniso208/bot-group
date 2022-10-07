@@ -181,26 +181,3 @@ def time(message):
 
 if __name__ == '__main__':
     bot.polling(none_stop=True)
-
-
-  # if c == 1:
-  #       bot.send_message(message.chat.id, 'True')
-  #   elif w != c:
-  #       bot.send_message(message.chat.id, 'False')
-  #       c -= 1
-
-
-
-# @bot.message_handler(commands=['pisun'])
-# def timus(message):
-#     if True:
-#         spis = (random.choice(num))
-#         bot.send_message(message.chat.id, 'Пісюн ' + message.chat.username + ' - '+ str(spis) + 'CМ' )
-#         time.sleep(5)
-#         
-
-
-  # f = open('pis.txt', 'r')
-  #   data = f.readlines()
-  #   for i in data:
-  #        bot.send_message(message.chat.id, i )
