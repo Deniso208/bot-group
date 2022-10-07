@@ -12,7 +12,7 @@ foo = ['vladi_sap', 'tolya_harbych', 'Zargo_0', 'driveburn', 'pycikkk', 'ded_vnu
 data = []
 @bot.message_handler(commands=['startt'])
 def startt_message(message):
-    bot.send_message(message.chat.id, "Список команд:\n/andreybulling\n/rusikbulling\n/danyabulling\n/dedbulling\n/artembulling\n/sapiehinbulling\n/pisun")
+    bot.send_message(message.chat.id, "Список команд:\n/andreybulling\n/rusikbulling\n/danyabulling\n/dedbulling\n/artembulling\n/sapiehinbulling\n/pepsibulling")
 @bot.message_handler(commands=['andreybulling'])
 def Andrey_Bulling(message):
     chatId=message.chat.id
@@ -95,6 +95,18 @@ def repeat_all_messages(message):
     #bot.send_sticker(message.chat.id, "CAACAgIAAxkBAAEClTZg8Ff8chF9AAHB_5ny-48k20OkoKgAAkAOAAIywglK38fhvyayJ3ogBA")
     video = open('Danya.mp4', 'rb')
     bot.send_video(message.chat.id, video)
+
+@bot.message_handler(commands=['pepsibulling'])
+def Peppsi_Bulling(message):
+    rand=random.randint(1,2)
+    if (rand==1):
+        bot.send_audio(message.chat.id, open("pepsi1.ogg", "rb"))
+        photo = open('pep.jpg', 'rb')
+        bot.send_photo(message.chat.id, photo)
+    elif(rand==2):
+        bot.send_audio(message.chat.id, open("pepsi2.ogg", "rb"))
+        photo = open('pep2.jpg', 'rb')
+        bot.send_photo(message.chat.id, photo)
 
 
 @bot.message_handler(commands=['links'])
