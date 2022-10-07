@@ -4,7 +4,7 @@ import random
 import time
 starttime=time.time()
 
-Token="1848358920:AAFRs2eh0G3xW01ywFDvVR4F9sVY-HtvBCI"
+Token="5101327646:AAFmBDGfsnApng2Kfu21PEVNIvgTSUb9Bjo"
 bot = telebot.TeleBot(Token)
 random.seed()
 
@@ -146,8 +146,10 @@ def timus(message):
 
 @bot.message_handler(commands=['pisun'])
 def pisun(message):
-   spis = str(random.randint(0, 42))
-   bot.send_message(message.chat.id, 'Пісюн ' + message.chat.username + ' - '+ spis + 'CМ')
+    spis = random.randint(0, 42)
+    bot.send_message(message.chat.id, 'Пісюн ' + message.chat.username + ' - '+ spis + 'CМ')
+    # data.append(str(msg))
+    # bot.register_next_step_handler(msg, start_message, data)
 
 
 # def start_message(message):
