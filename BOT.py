@@ -8,14 +8,11 @@ Token="1848358920:AAFRs2eh0G3xW01ywFDvVR4F9sVY-HtvBCI"
 bot = telebot.TeleBot(Token)
 random.seed()
 
+foo = ['vladi_sap', 'tolya_harbych', 'Zargo_0', 'driveburn', 'pycikkk', 'ded_vnutr1', 'Archimareto', 'LloidFord', 'Andrei', 'nnnassstiia', 'Ḁ̣d͇̩a̶̪ ̠͡ ̭f̯̭ ̯͘ ͔̝rẹ͉i̥͝o̴͉ ҉̲̱', 'DimaGIad', 'Машка🐈‍⬛', 'Bishopchick', ' kap234', 'Sunnypiase', 'u1ser0001234']
+data = []
 @bot.message_handler(commands=['startt'])
 def startt_message(message):
-    bot.send_message(message.chat.id, "Список команд:\n/andreybulling\n/rusikbulling\n/danyabulling\n/dedbulling\n/artembulling\n/sapiehinbulling")
-    if (message.text=="Рил"):
-        bot.send_sticker(message.chat.id, "CAACAgIAAxkBAAEClTZg8Ff8chF9AAHB_5ny-48k20OkoKgAAkAOAAIywglK38fhvyayJ3ogBA")
-    elif (message.text=="рил"):
-        bot.send_sticker(message.chat.id, "CAACAgIAAxkBAAEClTZg8Ff8chF9AAHB_5ny-48k20OkoKgAAkAOAAIywglK38fhvyayJ3ogBA")
-
+    bot.send_message(message.chat.id, "Список команд:\n/andreybulling\n/rusikbulling\n/danyabulling\n/dedbulling\n/artembulling\n/sapiehinbulling\n/pisun")
 @bot.message_handler(commands=['andreybulling'])
 def Andrey_Bulling(message):
     chatId=message.chat.id
@@ -86,6 +83,20 @@ def Rusik_Bulling(message):
 def Joe_Bidon(message):
     bot.send_message(message.chat.id, "Джо Байден")
 
+@bot.message_handler(commands=['karmanbulling'])
+def Karman_Bulling(message):
+    bot.send_message(message.chat.id, "Поносус")
+    bot.send_audio(message.chat.id, open("KARMANUS.ogg", "rb"))
+    photo = open('SUS.jpg', 'rb')
+    bot.send_photo(message.chat.id, photo)
+
+@bot.message_handler(commands=['danyabulling'])
+def repeat_all_messages(message):
+    #bot.send_sticker(message.chat.id, "CAACAgIAAxkBAAEClTZg8Ff8chF9AAHB_5ny-48k20OkoKgAAkAOAAIywglK38fhvyayJ3ogBA")
+    video = open('Danya.mp4', 'rb')
+    bot.send_video(message.chat.id, video)
+
+
 @bot.message_handler(commands=['links'])
 def Links(message):
     bot.send_message(message.chat.id, "Ссылка на лекции, практику и тех способы передачи информации: \n/links_lection\n/Ссылка на менеджмент и аналитику R: \n/links_managment\n Ссылка стат методы: \n/links_methods\nСсылка на технику и технологию АПК: \n/links_agroHuita")
@@ -121,34 +132,75 @@ def Abebrus_list(message):
     bot.send_photo(message.chat.id, photo)
 
     
-@bot.message_handler(commands=['karmanbulling'])
-def Karman_Bulling(message):
-    bot.send_message(message.chat.id, "Поносус")
-    bot.send_audio(message.chat.id, open("KARMANUS.ogg", "rb"))
-    photo = open('SUS.jpg', 'rb')
-    bot.send_photo(message.chat.id, photo)
-    
-@bot.message_handler(commands=['danyabulling'])
-def repeat_all_messages(message):
-    #bot.send_sticker(message.chat.id, "CAACAgIAAxkBAAEClTZg8Ff8chF9AAHB_5ny-48k20OkoKgAAkAOAAIywglK38fhvyayJ3ogBA")
-    video = open('Danya.mp4', 'rb')
-    bot.send_video(message.chat.id, video)
-
-    
 @bot.message_handler(commands=['all'])
 def ALL(message):
-    bot.send_message(message.chat.id, "Перекличка! @Zargo_0 , @Sunnypiase , @tolya_harbych, @u1ser0001234, @Archimareto @Машъка, @kap234, @ded_vnutr1, @pycikkk, @dderksenn, @Sakura77777777, @portubas, @bokunoandi, @Сладкий, @vladi_sap, @nnnassstiia")
+    bot.send_message(message.chat.id, + foo)
 
-#@bot.message_handler(commands=['test'])
-#def Joe_Bidon(message):
-#    bot.send_message(message.chat.id, "Тест")
-#    bot.send_photo(message.chat.id, "https://dub01pap001files.storage.live.com/y4myk6raYmlun7_MIMUPpV59L_kGdYsIWhhsxpfHqorJVZdVZpUen_F1zC8L9GsGTpLX0IOwHYvz_cO21uDN-UhwcWny4drWgSOiw2oboERdwy43Zo61dB6slBM7UEQmAyv2xNiMvdw74_x-QGsBYpaXbr4R7cZc-xKJue6xK7mGYT6IF947i6LwFzg3lngcNmwOF23AuTQV9zlAjU1l-rCxkjCVhQvutxkhhiRkRAEi0I?encodeFailures=1&width=691&height=722")
+def timus(message):
+    if True:
+        spis = (random.choice(foo))
+        bot.send_message(message.chat.id,'Абабо дня це- ' '@' + spis + '')
+    elif  False:
+        bot.send_message(message.chat.id, 'Упс я шось заЄбався')
+        time.sleep(10)
 
-#@bot.message_handler(commands=['testA'])
-#def Joe_Bidan(message):
-#    bot.send_message(message.chat.id, "Тест")
-#    bot.send_document(message.chat.id, "https://drive.google.com/file/d/1M6uhghGids6jkrUnPXGaHrIrAxdPFTdc/view?usp=sharing")
+@bot.message_handler(commands=['pisun'])
+def pisun(message):
+    spis = random.randint(0, 42)
+    msg = bot.send_message(message.chat.id, 'Пісюн ' + message.chat.username + ' - '+ str(spis) + 'CМ')
+    # data.append(str(msg))
+    # bot.register_next_step_handler(msg, start_message, data)
 
- 
+
+# def start_message(message):
+#     bot.send_message(message.chat.id, 'Ваш текст: ')
+
+
+
+
+@bot.message_handler(commands=['top_pisun'])
+def time(message):
+    name = message.chat.username
+    file=open('pis.txt','r')
+    text=file.read()
+    for i in text:
+        i = name.index(i)
+        print(text)
+
+
+
+
+    # if name in text:
+    #     bot.send_message(message.chat.id,  'True')
+    # elif name != text:
+    #     bot.send_message(message.chat.id,  'ГГ')
+
+    
+
+
+
 if __name__ == '__main__':
-     bot.polling(none_stop=True)
+    bot.polling(none_stop=True)
+
+
+  # if c == 1:
+  #       bot.send_message(message.chat.id, 'True')
+  #   elif w != c:
+  #       bot.send_message(message.chat.id, 'False')
+  #       c -= 1
+
+
+
+# @bot.message_handler(commands=['pisun'])
+# def timus(message):
+#     if True:
+#         spis = (random.choice(num))
+#         bot.send_message(message.chat.id, 'Пісюн ' + message.chat.username + ' - '+ str(spis) + 'CМ' )
+#         time.sleep(5)
+#         
+
+
+  # f = open('pis.txt', 'r')
+  #   data = f.readlines()
+  #   for i in data:
+  #        bot.send_message(message.chat.id, i )
