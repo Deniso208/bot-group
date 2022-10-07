@@ -147,7 +147,7 @@ def timus(message):
 @bot.message_handler(commands=['pisun'])
 def pisun(message):
     pon = random.randint(0, 42)
-    if = True:
+    if == True:
         user = message.chat.username
         bot.send_message(message.chat.id, 'Пісюн ' + user + ' - '+ pon + 'CМ')
 
