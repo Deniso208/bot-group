@@ -3,12 +3,14 @@ import http.client
 import random
 import time
 starttime=time.time()
-
+#5101327646:AAFmBDGfsnApng2Kfu21PEVNIvgTSUb9Bjo
+#1848358920:AAFRs2eh0G3xW01ywFDvVR4F9sVY-HtvBCI
 Token="1848358920:AAFRs2eh0G3xW01ywFDvVR4F9sVY-HtvBCI"
 bot = telebot.TeleBot(Token)
 random.seed()
 
-foo = ['vladi_sap', 'tolya_harbych', 'Zargo_0', 'driveburn', 'pycikkk', 'ded_vnutr1', 'Archimareto', 'LloidFord', 'Andrei', 'nnnassstiia', 'Ḁ̣d͇̩a̶̪ ̠͡ ̭f̯̭ ̯͘ ͔̝rẹ͉i̥͝o̴͉ ҉̲̱', 'DimaGIad', 'Машка🐈‍⬛', 'Bishopchick', ' kap234', 'Sunnypiase', 'u1ser0001234']
+foo = ['vladi_sap', 'tolya_harbych', 'Zargo_0', 'driveburn', 'pycikkk', 'ded_vnutr1', 'Archimareto', 'LloidFord', 'Andrei', 'nnnassstiia', 'Ḁ̣d͇̩a̶̪ ̠͡ ̭f̯̭ ̯͘ ͔̝rẹ͉i̥͝o̴͉ ҉̲̱', 'DimaGIad', 'Машка🐈‍⬛', 'Bishopchick', 'kap234', 'Sunnypiase', 'u1ser0001234', 'bokunoandi']
+foo.sort()
 data = []
 @bot.message_handler(commands=['startt'])
 def startt_message(message):
@@ -146,8 +148,12 @@ def Abebrus_list(message):
     
 @bot.message_handler(commands=['all'])
 def ALL(message):
-    bot.send_message(message.chat.id, + foo)
+    for x in foo:
+        print('@' + x[0:17])
+        bot.send_message(message.chat.id,'@' + x[0:17])
 
+
+@bot.message_handler(commands=['aboba'])
 def timus(message):
     if True:
         spis = (random.choice(foo))
@@ -158,10 +164,31 @@ def timus(message):
 
 @bot.message_handler(commands=['pisun'])
 def pisun(message):
-    intr=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,32,35]
+    x=1
+    intr=[0<x<42]
     pon = random.choice(intr)
     user = message.chat.username
-    bot.send_message(message.chat.id, 'Пісюн ' + user + ' - '+ str(random.randint(0,42))  + 'CМ')
+    bot.send_message(message.chat.id, 'Пісюн ' + str(user) + ' - '+ str(random.randint(0,42))  + 'CМ')  
+
+    
+@bot.message_handler(content_types=["text"])
+def handle_text(message):
+    if message.text.strip() == 'Перекличка':
+        for x in foo:
+            bot.send_message(message.chat.id,'@' + x[0:])
+    elif message.text.strip() == 'перекличка':
+        for x in foo:
+            bot.send_message(message.chat.id,'@' + x[0:])
+    elif message.text.strip() == 'Сука':
+        bot.send_message(message.chat.id,'Не лайся або подзвоню твоїй мамці малий ти засранець')
+    elif message.text.strip() == 'cука':
+        bot.send_message(message.chat.id,'Не лайся або подзвоню твоїй мамці малий ти засранець')
+    elif message.text.strip() == 'Чорт':
+        spis = (random.choice(foo))
+        bot.send_message(message.chat.id,'Чорт дня це- ' '@' + spis + '')
+
+
+
 
 
 # def start_message(message):
